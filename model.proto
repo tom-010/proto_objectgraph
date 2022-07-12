@@ -7,26 +7,44 @@ option go_package = "deniffel.com/examples/objectgraph/pb";
 
 message Employee {
     string id = 1;
+    string firstName = 2;
+    string lastName = 3;
+
+    message Ref {
+        string id = 1;
+        Employee loaded = 2;
+        // TODO: say, which one is the case?
+        // TODO: one of?
+    }
 }
 
 message Patient {
     string id = 1;
+    string salutation = 2;
+    string lastName = 3;
+    Employee.Ref employee = 4;
 }
 
 message Finding {
     string id = 1;
+    string name = 2;
+    string description = 3;
 }
 
 message SymmptomArea {
-
+    string description = 1;
+    float x = 2;
+    float y = 3;
+    int32 fas = 4;
 }
 
 message PainRadar {
-
+    repeated PainRadarDimension dimensions = 1;
 }
 
 message PainRadarDimension {
-
+    string name = 1;
+    float degree = 2;
 }
 
 message TrainingSession {
