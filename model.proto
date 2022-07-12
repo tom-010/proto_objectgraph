@@ -4,17 +4,20 @@ package objectgraph;
 
 option go_package = "deniffel.com/examples/objectgraph/pb";
 
+// TODOs:
+// * Ref: say, which one is the case?
+// * Ref: one of?
+
 
 message Employee {
     string id = 1;
     string firstName = 2;
     string lastName = 3;
-
+    Patient.Many patients = 4;
+    
     message Ref {
         string id = 1;
         Employee loaded = 2;
-        // TODO: say, which one is the case?
-        // TODO: one of?
     }
 }
 
@@ -23,12 +26,39 @@ message Patient {
     string salutation = 2;
     string lastName = 3;
     Employee.Ref employee = 4;
+    Finding.Many findings = 5;
+
+    // // // // // // // 
+    message Ref {
+        string id = 1;
+        Employee loaded = 2;
+    }
+    message Many {
+        bool present = 1;
+        repeated Patient all = 2;
+    }
 }
 
 message Finding {
     string id = 1;
     string name = 2;
     string description = 3;
+    Patient.Ref patient = 4;
+    repeated SymmptomArea symmptomAreas = 5;
+    PainRadar painRadar = 6;
+    TrainingSession.Many trainingSessions = 7;
+    TreatmentSession.Many treatmentSessions = 8;
+
+
+    // // // // // // // 
+    message Ref {
+        string id = 1;
+        Employee loaded = 2;
+    }
+    message Many {
+        bool present = 1;
+        repeated Finding all = 2;
+    }
 }
 
 message SymmptomArea {
@@ -49,9 +79,38 @@ message PainRadarDimension {
 
 message TrainingSession {
     string id = 1;
+    string name = 2;
+    repeated Exercise exercises = 3;
+
+    // // // // // // // 
+    message Ref {
+        string id = 1;
+        TrainingSession loaded = 2;
+    }
+    message Many {
+        bool present = 1;
+        repeated TrainingSession all = 2;
+    }
+}
+
+message Exercise {
+    string name = 1;
+    string reps = 2;
 }
 
 message TreatmentSession {
     string id = 1;
+    string name = 2;
+    string description = 3;
+
+    // // // // // // // 
+    message Ref {
+        string id = 1;
+        TreatmentSession loaded = 2;
+    }
+    message Many {
+        bool present = 1;
+        repeated TreatmentSession all = 2;
+    }
 }
 
