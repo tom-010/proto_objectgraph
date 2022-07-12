@@ -1,9 +1,0 @@
-syntax = 'proto3';
-
-message Node {
-    repeated Edge edges = 1;
-}
-
-message Edge {
-    repeated Node nodes = 2;
-}
