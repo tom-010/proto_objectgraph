@@ -81,6 +81,8 @@ message TrainingSession {
     string id = 1;
     string name = 2;
     repeated Exercise exercises = 3;
+    Finding.Ref finding = 4;
+
 
     // // // // // // // 
     message Ref {
@@ -102,6 +104,8 @@ message TreatmentSession {
     string id = 1;
     string name = 2;
     string description = 3;
+    Finding.Ref finding = 4;
+
 
     // // // // // // // 
     message Ref {
