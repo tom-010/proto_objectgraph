@@ -2,4 +2,6 @@
 
 set -e 
 
-go run ./cmd/example
+# go run ./cmd/example
+
+dart run dart/main.dart
