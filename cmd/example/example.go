@@ -1,21 +1,22 @@
 package main
 
 import (
-	"encoding/json"
 	"log"
 
 	pb "deniffel.com/examples/objectgraph/pkg/pb"
-	"github.com/gogo/protobuf/jsonpb"
-	"github.com/gogo/protobuf/proto"
 )
 
 func main() {
+
+	db := NewDb()
 
 	employee := pb.Employee{
 		Id:        "123",
 		FirstName: "Thomas",
 		LastName:  "Deniffel",
 	}
+	db.Store(&employee)
+
 	log.Println(&employee)
 	patient := pb.Patient{
 		Id:         "3458021",
@@ -41,14 +42,7 @@ func main() {
 
 	// result, _ := m.MarshalToString(&patient)
 	log.Println(toMap(&employee2))
-
-}
-
-func toMap(m proto.Message) map[string]interface{} {
-	marshaler := jsonpb.Marshaler{}
-	result, _ := marshaler.MarshalToString(m)
-	res := make(map[string]interface{})
-	json.Unmarshal([]byte(result), &res)
-	return res
+	s, _ := db.Json()
+	log.Println(string(s))
 
 }
