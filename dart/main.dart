@@ -36,8 +36,16 @@ class Db {
 }
 
 
+String pointsTo(GeneratedMessage msg) {
+  var res = msg.info_.qualifiedMessageName;
+  var parts = res.split(".");
+  parts.removeLast();
+  return parts.join(".");
+}
 
 void main() async {
   final db = await Db.openFromFile('db.json');
-  print(db.load(Employee()));
+  final employees = db.load<Employee>(Employee());
+  Employee employee = employees[1];
+  print(pointsTo(employee.patients));
 }
