@@ -17,14 +17,13 @@ func main() {
 	}
 	db.Store(&employee)
 
-	log.Println(&employee)
 	patient := pb.Patient{
 		Id:         "3458021",
 		Salutation: "Herr",
 		LastName:   "Mustermann",
 		Employee:   &pb.Employee_Ref{Id: "123", Loaded: &employee},
 	}
-	log.Println(&patient)
+	db.Store(&patient)
 
 	employee2 := pb.Employee{
 		Id:        "4920393",
@@ -32,6 +31,7 @@ func main() {
 		LastName:  "Wölfle",
 		Patients:  &pb.Patient_Many{All: []*pb.Patient{&patient}},
 	}
+	db.Store(&employee2)
 
 	if employee.Patients != nil {
 		log.Printf("the employee, has %d patients", len(employee.Patients.All))
@@ -40,9 +40,6 @@ func main() {
 		log.Printf("the employee2, has %d patients", len(employee2.Patients.All))
 	}
 
-	// result, _ := m.MarshalToString(&patient)
-	log.Println(toMap(&employee2))
-	s, _ := db.Json()
-	log.Println(string(s))
+	db.SaveToFile("db.json")
 
 }

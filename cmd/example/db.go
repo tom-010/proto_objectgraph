@@ -2,6 +2,8 @@ package main
 
 import (
 	"encoding/json"
+	"log"
+	"os"
 
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/reflect/protoreflect"
@@ -27,7 +29,22 @@ func (d *Db) Store(m protoreflect.ProtoMessage) {
 }
 
 func (d *Db) Json() ([]byte, error) {
-	return json.Marshal(d.collections)
+	return json.MarshalIndent(d.collections, "", "  ")
+}
+
+func (d *Db) SaveToFile(path string) {
+	f, err := os.Create(path)
+	if err != nil {
+		log.Fatalf("could not open file: %v", err)
+	}
+	defer f.Close()
+
+	json, err := d.Json()
+	if err != nil {
+		log.Fatalf("Could not encode db: %v", err)
+	}
+
+	f.Write(json)
 }
 
 func toMap(m protoreflect.ProtoMessage) map[string]interface{} {
