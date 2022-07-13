@@ -13,54 +13,77 @@ message Employee {
     string id = 1;
     string firstName = 2;
     string lastName = 3;
-    Patient.Many patients = 4;
-    
+    MyPatients myPatients = 4;
+    PatientsCreatedByMe createdByMe = 5;
 
-    // // // // // // // 
+    message MyPatients {
+        Patient.AssignedEmployee backRef = 1;
+        bool loaded = 2;
+        repeated Patient all = 3;
+    }
+
+    message PatientsCreatedByMe {
+        Patient.CreatedByEmployee backRef = 1;
+        repeated Patient all = 3;
+    }
+
     message Ref {
         string id = 1;
         Employee loaded = 2;
     }
+
 }
 
 message Patient {
     string id = 1;
     string salutation = 2;
     string lastName = 3;
-    Employee.Ref employee = 4;
-    Finding.Many findings = 5;
+    AssignedEmployee employee = 4;
+    Findings findings = 5;
 
+    message Findings {
+        bool loaded = 1;
+        repeated Finding all = 2;
+    }
 
-    // // // // // // // 
-    message Ref {
+    message AssignedEmployee {
         string id = 1;
         Employee loaded = 2;
     }
-    message Many {
-        bool present = 1;
-        repeated Patient all = 2;
+
+    message CreatedByEmployee {
+        string id = 1;
+        Employee loaded = 2;
     }
+
 }
+
 
 message Finding {
     string id = 1;
     string name = 2;
     string description = 3;
-    Patient.Ref patient = 4;
+    PatientRef patient = 4;
     repeated SymmptomArea symmptomAreas = 5;
     PainRadar painRadar = 6;
-    TrainingSession.Many trainingSessions = 7;
-    TreatmentSession.Many treatmentSessions = 8;
+    TrainingSessions trainingSessions = 7;
+    TreatmentSessions treatmentSessions = 8;
 
-
-    // // // // // // // 
-    message Ref {
+    message PatientRef {
         string id = 1;
-        Employee loaded = 2;
+        Patient loaded = 2;
     }
-    message Many {
-        bool present = 1;
-        repeated Finding all = 2;
+
+    message TrainingSessions {
+        bool loaded = 1;
+        repeated TrainingSession all = 2;
+        // TODO: backref required! --> in others too
+    }
+
+    message TreatmentSessions {
+        bool loaded = 1;
+        repeated TreatmentSession all = 2;
+        // TODO: backref required!
     }
 }
 
@@ -84,8 +107,12 @@ message TrainingSession {
     string id = 1;
     string name = 2;
     repeated Exercise exercises = 3;
-    Finding.Ref finding = 4;
+    FindingRef finding = 4;
 
+    message FindingRef {
+        string id = 1;
+        repeated Finding loaded = 2;
+    }
 
     // // // // // // // 
     message Ref {
@@ -107,18 +134,18 @@ message TreatmentSession {
     string id = 1;
     string name = 2;
     string description = 3;
-    Finding.Ref finding = 4;
-    Patient.Ref patient = 5;
+    Findings findings = 4;
+    PatientRef patient = 5;
 
-
-    // // // // // // // 
-    message Ref {
-        string id = 1;
-        TreatmentSession loaded = 2;
+    message Findings {
+        bool loaded = 1;
+        repeated Finding all = 2;
+        // TODO: backref!
     }
-    message Many {
-        bool present = 1;
-        repeated TreatmentSession all = 2;
+
+    message PatientRef {
+        string id = 1;
+        Patient loaded = 2;
     }
 }
 

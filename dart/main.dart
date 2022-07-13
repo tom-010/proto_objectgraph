@@ -47,5 +47,5 @@ void main() async {
   final db = await Db.openFromFile('db.json');
   final employees = db.load<Employee>(Employee());
   Employee employee = employees[1];
-  print(pointsTo(employee.patients));
+  // print(pointsTo(employee.patients));
 }
