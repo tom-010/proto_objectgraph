@@ -1,0 +1,67 @@
+syntax = 'proto3';
+
+package objectgraph;
+
+option go_package = "deniffel.com/examples/objectgraph/pb";
+
+
+message Employee {
+    string id = 1;
+    string firstName = 2;
+    string lastName = 3;
+}
+
+message Patient {
+    string id = 1;
+    string salutation = 2;
+    string lastName = 3;
+    string emoloyee 4;
+    string createdBy = 5;
+}
+
+
+message Finding {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+    string patient = 4;
+    repeated SymmptomArea symmptomAreas = 5;
+    PainRadar painRadar = 6;
+}
+
+message SymmptomArea {
+    string description = 1;
+    float x = 2;
+    float y = 3;
+    int32 fas = 4;
+}
+
+message PainRadar {
+    repeated PainRadarDimension dimensions = 1;
+}
+
+message PainRadarDimension {
+    string name = 1;
+    float degree = 2;
+}
+
+message TrainingSession {
+    string id = 1;
+    string name = 2;
+    repeated Exercise exercises = 3;
+    string finding = 4;
+}
+
+message Exercise {
+    string name = 1;
+    string reps = 2;
+}
+
+message TreatmentSession {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+    string finding = 4;
+    string patient = 5;
+}
+

@@ -9,17 +9,17 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class Employee_MyPatients extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Employee.MyPatients', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
-    ..aOM<Patient_AssignedEmployee>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'backRef', protoName: 'backRef', subBuilder: Patient_AssignedEmployee.create)
+class Employee_MyPatientsLazy extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Employee.MyPatientsLazy', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
+    ..aOM<Patient_AssignedEmployeeRef>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'backRef', protoName: 'backRef', subBuilder: Patient_AssignedEmployeeRef.create)
     ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded')
     ..pc<Patient>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'all', $pb.PbFieldType.PM, subBuilder: Patient.create)
     ..hasRequiredFields = false
   ;
 
-  Employee_MyPatients._() : super();
-  factory Employee_MyPatients({
-    Patient_AssignedEmployee? backRef,
+  Employee_MyPatientsLazy._() : super();
+  factory Employee_MyPatientsLazy({
+    Patient_AssignedEmployeeRef? backRef,
     $core.bool? loaded,
     $core.Iterable<Patient>? all,
   }) {
@@ -35,37 +35,37 @@ class Employee_MyPatients extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory Employee_MyPatients.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Employee_MyPatients.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Employee_MyPatientsLazy.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Employee_MyPatientsLazy.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Employee_MyPatients clone() => Employee_MyPatients()..mergeFromMessage(this);
+  Employee_MyPatientsLazy clone() => Employee_MyPatientsLazy()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Employee_MyPatients copyWith(void Function(Employee_MyPatients) updates) => super.copyWith((message) => updates(message as Employee_MyPatients)) as Employee_MyPatients; // ignore: deprecated_member_use
+  Employee_MyPatientsLazy copyWith(void Function(Employee_MyPatientsLazy) updates) => super.copyWith((message) => updates(message as Employee_MyPatientsLazy)) as Employee_MyPatientsLazy; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Employee_MyPatients create() => Employee_MyPatients._();
-  Employee_MyPatients createEmptyInstance() => create();
-  static $pb.PbList<Employee_MyPatients> createRepeated() => $pb.PbList<Employee_MyPatients>();
+  static Employee_MyPatientsLazy create() => Employee_MyPatientsLazy._();
+  Employee_MyPatientsLazy createEmptyInstance() => create();
+  static $pb.PbList<Employee_MyPatientsLazy> createRepeated() => $pb.PbList<Employee_MyPatientsLazy>();
   @$core.pragma('dart2js:noInline')
-  static Employee_MyPatients getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Employee_MyPatients>(create);
-  static Employee_MyPatients? _defaultInstance;
+  static Employee_MyPatientsLazy getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Employee_MyPatientsLazy>(create);
+  static Employee_MyPatientsLazy? _defaultInstance;
 
   @$pb.TagNumber(1)
-  Patient_AssignedEmployee get backRef => $_getN(0);
+  Patient_AssignedEmployeeRef get backRef => $_getN(0);
   @$pb.TagNumber(1)
-  set backRef(Patient_AssignedEmployee v) { setField(1, v); }
+  set backRef(Patient_AssignedEmployeeRef v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBackRef() => $_has(0);
   @$pb.TagNumber(1)
   void clearBackRef() => clearField(1);
   @$pb.TagNumber(1)
-  Patient_AssignedEmployee ensureBackRef() => $_ensure(0);
+  Patient_AssignedEmployeeRef ensureBackRef() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.bool get loaded => $_getBF(1);
@@ -80,124 +80,75 @@ class Employee_MyPatients extends $pb.GeneratedMessage {
   $core.List<Patient> get all => $_getList(2);
 }
 
-class Employee_PatientsCreatedByMe extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Employee.PatientsCreatedByMe', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
-    ..aOM<Patient_CreatedByEmployee>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'backRef', protoName: 'backRef', subBuilder: Patient_CreatedByEmployee.create)
+class Employee_PatientsCreatedByMeLazy extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Employee.PatientsCreatedByMeLazy', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
+    ..aOM<Patient_CreatedByEmployeeRef>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'backRef', protoName: 'backRef', subBuilder: Patient_CreatedByEmployeeRef.create)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded')
     ..pc<Patient>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'all', $pb.PbFieldType.PM, subBuilder: Patient.create)
     ..hasRequiredFields = false
   ;
 
-  Employee_PatientsCreatedByMe._() : super();
-  factory Employee_PatientsCreatedByMe({
-    Patient_CreatedByEmployee? backRef,
+  Employee_PatientsCreatedByMeLazy._() : super();
+  factory Employee_PatientsCreatedByMeLazy({
+    Patient_CreatedByEmployeeRef? backRef,
+    $core.bool? loaded,
     $core.Iterable<Patient>? all,
   }) {
     final _result = create();
     if (backRef != null) {
       _result.backRef = backRef;
     }
+    if (loaded != null) {
+      _result.loaded = loaded;
+    }
     if (all != null) {
       _result.all.addAll(all);
     }
     return _result;
   }
-  factory Employee_PatientsCreatedByMe.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Employee_PatientsCreatedByMe.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Employee_PatientsCreatedByMeLazy.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Employee_PatientsCreatedByMeLazy.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Employee_PatientsCreatedByMe clone() => Employee_PatientsCreatedByMe()..mergeFromMessage(this);
+  Employee_PatientsCreatedByMeLazy clone() => Employee_PatientsCreatedByMeLazy()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Employee_PatientsCreatedByMe copyWith(void Function(Employee_PatientsCreatedByMe) updates) => super.copyWith((message) => updates(message as Employee_PatientsCreatedByMe)) as Employee_PatientsCreatedByMe; // ignore: deprecated_member_use
+  Employee_PatientsCreatedByMeLazy copyWith(void Function(Employee_PatientsCreatedByMeLazy) updates) => super.copyWith((message) => updates(message as Employee_PatientsCreatedByMeLazy)) as Employee_PatientsCreatedByMeLazy; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Employee_PatientsCreatedByMe create() => Employee_PatientsCreatedByMe._();
-  Employee_PatientsCreatedByMe createEmptyInstance() => create();
-  static $pb.PbList<Employee_PatientsCreatedByMe> createRepeated() => $pb.PbList<Employee_PatientsCreatedByMe>();
+  static Employee_PatientsCreatedByMeLazy create() => Employee_PatientsCreatedByMeLazy._();
+  Employee_PatientsCreatedByMeLazy createEmptyInstance() => create();
+  static $pb.PbList<Employee_PatientsCreatedByMeLazy> createRepeated() => $pb.PbList<Employee_PatientsCreatedByMeLazy>();
   @$core.pragma('dart2js:noInline')
-  static Employee_PatientsCreatedByMe getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Employee_PatientsCreatedByMe>(create);
-  static Employee_PatientsCreatedByMe? _defaultInstance;
+  static Employee_PatientsCreatedByMeLazy getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Employee_PatientsCreatedByMeLazy>(create);
+  static Employee_PatientsCreatedByMeLazy? _defaultInstance;
 
   @$pb.TagNumber(1)
-  Patient_CreatedByEmployee get backRef => $_getN(0);
+  Patient_CreatedByEmployeeRef get backRef => $_getN(0);
   @$pb.TagNumber(1)
-  set backRef(Patient_CreatedByEmployee v) { setField(1, v); }
+  set backRef(Patient_CreatedByEmployeeRef v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBackRef() => $_has(0);
   @$pb.TagNumber(1)
   void clearBackRef() => clearField(1);
   @$pb.TagNumber(1)
-  Patient_CreatedByEmployee ensureBackRef() => $_ensure(0);
-
-  @$pb.TagNumber(3)
-  $core.List<Patient> get all => $_getList(1);
-}
-
-class Employee_Ref extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Employee.Ref', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOM<Employee>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded', subBuilder: Employee.create)
-    ..hasRequiredFields = false
-  ;
-
-  Employee_Ref._() : super();
-  factory Employee_Ref({
-    $core.String? id,
-    Employee? loaded,
-  }) {
-    final _result = create();
-    if (id != null) {
-      _result.id = id;
-    }
-    if (loaded != null) {
-      _result.loaded = loaded;
-    }
-    return _result;
-  }
-  factory Employee_Ref.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Employee_Ref.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Employee_Ref clone() => Employee_Ref()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Employee_Ref copyWith(void Function(Employee_Ref) updates) => super.copyWith((message) => updates(message as Employee_Ref)) as Employee_Ref; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Employee_Ref create() => Employee_Ref._();
-  Employee_Ref createEmptyInstance() => create();
-  static $pb.PbList<Employee_Ref> createRepeated() => $pb.PbList<Employee_Ref>();
-  @$core.pragma('dart2js:noInline')
-  static Employee_Ref getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Employee_Ref>(create);
-  static Employee_Ref? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get id => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set id($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  Patient_CreatedByEmployeeRef ensureBackRef() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  Employee get loaded => $_getN(1);
+  $core.bool get loaded => $_getBF(1);
   @$pb.TagNumber(2)
-  set loaded(Employee v) { setField(2, v); }
+  set loaded($core.bool v) { $_setBool(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasLoaded() => $_has(1);
   @$pb.TagNumber(2)
   void clearLoaded() => clearField(2);
-  @$pb.TagNumber(2)
-  Employee ensureLoaded() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.List<Patient> get all => $_getList(2);
 }
 
 class Employee extends $pb.GeneratedMessage {
@@ -205,8 +156,8 @@ class Employee extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'firstName', protoName: 'firstName')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastName', protoName: 'lastName')
-    ..aOM<Employee_MyPatients>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'myPatients', protoName: 'myPatients', subBuilder: Employee_MyPatients.create)
-    ..aOM<Employee_PatientsCreatedByMe>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createdByMe', protoName: 'createdByMe', subBuilder: Employee_PatientsCreatedByMe.create)
+    ..aOM<Employee_MyPatientsLazy>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'myPatients', protoName: 'myPatients', subBuilder: Employee_MyPatientsLazy.create)
+    ..aOM<Employee_PatientsCreatedByMeLazy>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createdByMe', protoName: 'createdByMe', subBuilder: Employee_PatientsCreatedByMeLazy.create)
     ..hasRequiredFields = false
   ;
 
@@ -215,8 +166,8 @@ class Employee extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? firstName,
     $core.String? lastName,
-    Employee_MyPatients? myPatients,
-    Employee_PatientsCreatedByMe? createdByMe,
+    Employee_MyPatientsLazy? myPatients,
+    Employee_PatientsCreatedByMeLazy? createdByMe,
   }) {
     final _result = create();
     if (id != null) {
@@ -285,41 +236,46 @@ class Employee extends $pb.GeneratedMessage {
   void clearLastName() => clearField(3);
 
   @$pb.TagNumber(4)
-  Employee_MyPatients get myPatients => $_getN(3);
+  Employee_MyPatientsLazy get myPatients => $_getN(3);
   @$pb.TagNumber(4)
-  set myPatients(Employee_MyPatients v) { setField(4, v); }
+  set myPatients(Employee_MyPatientsLazy v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasMyPatients() => $_has(3);
   @$pb.TagNumber(4)
   void clearMyPatients() => clearField(4);
   @$pb.TagNumber(4)
-  Employee_MyPatients ensureMyPatients() => $_ensure(3);
+  Employee_MyPatientsLazy ensureMyPatients() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  Employee_PatientsCreatedByMe get createdByMe => $_getN(4);
+  Employee_PatientsCreatedByMeLazy get createdByMe => $_getN(4);
   @$pb.TagNumber(5)
-  set createdByMe(Employee_PatientsCreatedByMe v) { setField(5, v); }
+  set createdByMe(Employee_PatientsCreatedByMeLazy v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasCreatedByMe() => $_has(4);
   @$pb.TagNumber(5)
   void clearCreatedByMe() => clearField(5);
   @$pb.TagNumber(5)
-  Employee_PatientsCreatedByMe ensureCreatedByMe() => $_ensure(4);
+  Employee_PatientsCreatedByMeLazy ensureCreatedByMe() => $_ensure(4);
 }
 
-class Patient_Findings extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Patient.Findings', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded')
-    ..pc<Finding>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'all', $pb.PbFieldType.PM, subBuilder: Finding.create)
+class Patient_FindingsLazy extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Patient.FindingsLazy', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
+    ..aOM<Finding_PatientRef>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'backRef', protoName: 'backRef', subBuilder: Finding_PatientRef.create)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded')
+    ..pc<Finding>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'all', $pb.PbFieldType.PM, subBuilder: Finding.create)
     ..hasRequiredFields = false
   ;
 
-  Patient_Findings._() : super();
-  factory Patient_Findings({
+  Patient_FindingsLazy._() : super();
+  factory Patient_FindingsLazy({
+    Finding_PatientRef? backRef,
     $core.bool? loaded,
     $core.Iterable<Finding>? all,
   }) {
     final _result = create();
+    if (backRef != null) {
+      _result.backRef = backRef;
+    }
     if (loaded != null) {
       _result.loaded = loaded;
     }
@@ -328,49 +284,60 @@ class Patient_Findings extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory Patient_Findings.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Patient_Findings.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Patient_FindingsLazy.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Patient_FindingsLazy.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Patient_Findings clone() => Patient_Findings()..mergeFromMessage(this);
+  Patient_FindingsLazy clone() => Patient_FindingsLazy()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Patient_Findings copyWith(void Function(Patient_Findings) updates) => super.copyWith((message) => updates(message as Patient_Findings)) as Patient_Findings; // ignore: deprecated_member_use
+  Patient_FindingsLazy copyWith(void Function(Patient_FindingsLazy) updates) => super.copyWith((message) => updates(message as Patient_FindingsLazy)) as Patient_FindingsLazy; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Patient_Findings create() => Patient_Findings._();
-  Patient_Findings createEmptyInstance() => create();
-  static $pb.PbList<Patient_Findings> createRepeated() => $pb.PbList<Patient_Findings>();
+  static Patient_FindingsLazy create() => Patient_FindingsLazy._();
+  Patient_FindingsLazy createEmptyInstance() => create();
+  static $pb.PbList<Patient_FindingsLazy> createRepeated() => $pb.PbList<Patient_FindingsLazy>();
   @$core.pragma('dart2js:noInline')
-  static Patient_Findings getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Patient_Findings>(create);
-  static Patient_Findings? _defaultInstance;
+  static Patient_FindingsLazy getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Patient_FindingsLazy>(create);
+  static Patient_FindingsLazy? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.bool get loaded => $_getBF(0);
+  Finding_PatientRef get backRef => $_getN(0);
   @$pb.TagNumber(1)
-  set loaded($core.bool v) { $_setBool(0, v); }
+  set backRef(Finding_PatientRef v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasLoaded() => $_has(0);
+  $core.bool hasBackRef() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLoaded() => clearField(1);
+  void clearBackRef() => clearField(1);
+  @$pb.TagNumber(1)
+  Finding_PatientRef ensureBackRef() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<Finding> get all => $_getList(1);
+  $core.bool get loaded => $_getBF(1);
+  @$pb.TagNumber(2)
+  set loaded($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLoaded() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLoaded() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<Finding> get all => $_getList(2);
 }
 
-class Patient_AssignedEmployee extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Patient.AssignedEmployee', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
+class Patient_AssignedEmployeeRef extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Patient.AssignedEmployeeRef', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOM<Employee>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded', subBuilder: Employee.create)
     ..hasRequiredFields = false
   ;
 
-  Patient_AssignedEmployee._() : super();
-  factory Patient_AssignedEmployee({
+  Patient_AssignedEmployeeRef._() : super();
+  factory Patient_AssignedEmployeeRef({
     $core.String? id,
     Employee? loaded,
   }) {
@@ -383,26 +350,26 @@ class Patient_AssignedEmployee extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory Patient_AssignedEmployee.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Patient_AssignedEmployee.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Patient_AssignedEmployeeRef.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Patient_AssignedEmployeeRef.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Patient_AssignedEmployee clone() => Patient_AssignedEmployee()..mergeFromMessage(this);
+  Patient_AssignedEmployeeRef clone() => Patient_AssignedEmployeeRef()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Patient_AssignedEmployee copyWith(void Function(Patient_AssignedEmployee) updates) => super.copyWith((message) => updates(message as Patient_AssignedEmployee)) as Patient_AssignedEmployee; // ignore: deprecated_member_use
+  Patient_AssignedEmployeeRef copyWith(void Function(Patient_AssignedEmployeeRef) updates) => super.copyWith((message) => updates(message as Patient_AssignedEmployeeRef)) as Patient_AssignedEmployeeRef; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Patient_AssignedEmployee create() => Patient_AssignedEmployee._();
-  Patient_AssignedEmployee createEmptyInstance() => create();
-  static $pb.PbList<Patient_AssignedEmployee> createRepeated() => $pb.PbList<Patient_AssignedEmployee>();
+  static Patient_AssignedEmployeeRef create() => Patient_AssignedEmployeeRef._();
+  Patient_AssignedEmployeeRef createEmptyInstance() => create();
+  static $pb.PbList<Patient_AssignedEmployeeRef> createRepeated() => $pb.PbList<Patient_AssignedEmployeeRef>();
   @$core.pragma('dart2js:noInline')
-  static Patient_AssignedEmployee getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Patient_AssignedEmployee>(create);
-  static Patient_AssignedEmployee? _defaultInstance;
+  static Patient_AssignedEmployeeRef getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Patient_AssignedEmployeeRef>(create);
+  static Patient_AssignedEmployeeRef? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -425,15 +392,15 @@ class Patient_AssignedEmployee extends $pb.GeneratedMessage {
   Employee ensureLoaded() => $_ensure(1);
 }
 
-class Patient_CreatedByEmployee extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Patient.CreatedByEmployee', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
+class Patient_CreatedByEmployeeRef extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Patient.CreatedByEmployeeRef', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOM<Employee>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded', subBuilder: Employee.create)
     ..hasRequiredFields = false
   ;
 
-  Patient_CreatedByEmployee._() : super();
-  factory Patient_CreatedByEmployee({
+  Patient_CreatedByEmployeeRef._() : super();
+  factory Patient_CreatedByEmployeeRef({
     $core.String? id,
     Employee? loaded,
   }) {
@@ -446,26 +413,26 @@ class Patient_CreatedByEmployee extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory Patient_CreatedByEmployee.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Patient_CreatedByEmployee.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Patient_CreatedByEmployeeRef.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Patient_CreatedByEmployeeRef.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Patient_CreatedByEmployee clone() => Patient_CreatedByEmployee()..mergeFromMessage(this);
+  Patient_CreatedByEmployeeRef clone() => Patient_CreatedByEmployeeRef()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Patient_CreatedByEmployee copyWith(void Function(Patient_CreatedByEmployee) updates) => super.copyWith((message) => updates(message as Patient_CreatedByEmployee)) as Patient_CreatedByEmployee; // ignore: deprecated_member_use
+  Patient_CreatedByEmployeeRef copyWith(void Function(Patient_CreatedByEmployeeRef) updates) => super.copyWith((message) => updates(message as Patient_CreatedByEmployeeRef)) as Patient_CreatedByEmployeeRef; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Patient_CreatedByEmployee create() => Patient_CreatedByEmployee._();
-  Patient_CreatedByEmployee createEmptyInstance() => create();
-  static $pb.PbList<Patient_CreatedByEmployee> createRepeated() => $pb.PbList<Patient_CreatedByEmployee>();
+  static Patient_CreatedByEmployeeRef create() => Patient_CreatedByEmployeeRef._();
+  Patient_CreatedByEmployeeRef createEmptyInstance() => create();
+  static $pb.PbList<Patient_CreatedByEmployeeRef> createRepeated() => $pb.PbList<Patient_CreatedByEmployeeRef>();
   @$core.pragma('dart2js:noInline')
-  static Patient_CreatedByEmployee getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Patient_CreatedByEmployee>(create);
-  static Patient_CreatedByEmployee? _defaultInstance;
+  static Patient_CreatedByEmployeeRef getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Patient_CreatedByEmployeeRef>(create);
+  static Patient_CreatedByEmployeeRef? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -493,8 +460,9 @@ class Patient extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'salutation')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastName', protoName: 'lastName')
-    ..aOM<Patient_AssignedEmployee>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'employee', subBuilder: Patient_AssignedEmployee.create)
-    ..aOM<Patient_Findings>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'findings', subBuilder: Patient_Findings.create)
+    ..aOM<Patient_AssignedEmployeeRef>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'employee', subBuilder: Patient_AssignedEmployeeRef.create)
+    ..aOM<Patient_CreatedByEmployeeRef>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createdBy', protoName: 'createdBy', subBuilder: Patient_CreatedByEmployeeRef.create)
+    ..aOM<Patient_FindingsLazy>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'findings', subBuilder: Patient_FindingsLazy.create)
     ..hasRequiredFields = false
   ;
 
@@ -503,8 +471,9 @@ class Patient extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? salutation,
     $core.String? lastName,
-    Patient_AssignedEmployee? employee,
-    Patient_Findings? findings,
+    Patient_AssignedEmployeeRef? employee,
+    Patient_CreatedByEmployeeRef? createdBy,
+    Patient_FindingsLazy? findings,
   }) {
     final _result = create();
     if (id != null) {
@@ -518,6 +487,9 @@ class Patient extends $pb.GeneratedMessage {
     }
     if (employee != null) {
       _result.employee = employee;
+    }
+    if (createdBy != null) {
+      _result.createdBy = createdBy;
     }
     if (findings != null) {
       _result.findings = findings;
@@ -573,26 +545,37 @@ class Patient extends $pb.GeneratedMessage {
   void clearLastName() => clearField(3);
 
   @$pb.TagNumber(4)
-  Patient_AssignedEmployee get employee => $_getN(3);
+  Patient_AssignedEmployeeRef get employee => $_getN(3);
   @$pb.TagNumber(4)
-  set employee(Patient_AssignedEmployee v) { setField(4, v); }
+  set employee(Patient_AssignedEmployeeRef v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasEmployee() => $_has(3);
   @$pb.TagNumber(4)
   void clearEmployee() => clearField(4);
   @$pb.TagNumber(4)
-  Patient_AssignedEmployee ensureEmployee() => $_ensure(3);
+  Patient_AssignedEmployeeRef ensureEmployee() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  Patient_Findings get findings => $_getN(4);
+  Patient_CreatedByEmployeeRef get createdBy => $_getN(4);
   @$pb.TagNumber(5)
-  set findings(Patient_Findings v) { setField(5, v); }
+  set createdBy(Patient_CreatedByEmployeeRef v) { setField(5, v); }
   @$pb.TagNumber(5)
-  $core.bool hasFindings() => $_has(4);
+  $core.bool hasCreatedBy() => $_has(4);
   @$pb.TagNumber(5)
-  void clearFindings() => clearField(5);
+  void clearCreatedBy() => clearField(5);
   @$pb.TagNumber(5)
-  Patient_Findings ensureFindings() => $_ensure(4);
+  Patient_CreatedByEmployeeRef ensureCreatedBy() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  Patient_FindingsLazy get findings => $_getN(5);
+  @$pb.TagNumber(6)
+  set findings(Patient_FindingsLazy v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasFindings() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearFindings() => clearField(6);
+  @$pb.TagNumber(6)
+  Patient_FindingsLazy ensureFindings() => $_ensure(5);
 }
 
 class Finding_PatientRef extends $pb.GeneratedMessage {
@@ -660,17 +643,22 @@ class Finding_PatientRef extends $pb.GeneratedMessage {
 
 class Finding_TrainingSessions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Finding.TrainingSessions', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded')
-    ..pc<TrainingSession>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'all', $pb.PbFieldType.PM, subBuilder: TrainingSession.create)
+    ..aOM<TrainingSession_FindingRef>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'backRef', protoName: 'backRef', subBuilder: TrainingSession_FindingRef.create)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded')
+    ..pc<TrainingSession>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'all', $pb.PbFieldType.PM, subBuilder: TrainingSession.create)
     ..hasRequiredFields = false
   ;
 
   Finding_TrainingSessions._() : super();
   factory Finding_TrainingSessions({
+    TrainingSession_FindingRef? backRef,
     $core.bool? loaded,
     $core.Iterable<TrainingSession>? all,
   }) {
     final _result = create();
+    if (backRef != null) {
+      _result.backRef = backRef;
+    }
     if (loaded != null) {
       _result.loaded = loaded;
     }
@@ -701,31 +689,47 @@ class Finding_TrainingSessions extends $pb.GeneratedMessage {
   static Finding_TrainingSessions? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.bool get loaded => $_getBF(0);
+  TrainingSession_FindingRef get backRef => $_getN(0);
   @$pb.TagNumber(1)
-  set loaded($core.bool v) { $_setBool(0, v); }
+  set backRef(TrainingSession_FindingRef v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasLoaded() => $_has(0);
+  $core.bool hasBackRef() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLoaded() => clearField(1);
+  void clearBackRef() => clearField(1);
+  @$pb.TagNumber(1)
+  TrainingSession_FindingRef ensureBackRef() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<TrainingSession> get all => $_getList(1);
+  $core.bool get loaded => $_getBF(1);
+  @$pb.TagNumber(2)
+  set loaded($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLoaded() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLoaded() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<TrainingSession> get all => $_getList(2);
 }
 
 class Finding_TreatmentSessions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Finding.TreatmentSessions', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded')
-    ..pc<TreatmentSession>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'all', $pb.PbFieldType.PM, subBuilder: TreatmentSession.create)
+    ..aOM<TreatmentSession_FindingRef>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'backRef', protoName: 'backRef', subBuilder: TreatmentSession_FindingRef.create)
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded')
+    ..pc<TreatmentSession>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'all', $pb.PbFieldType.PM, subBuilder: TreatmentSession.create)
     ..hasRequiredFields = false
   ;
 
   Finding_TreatmentSessions._() : super();
   factory Finding_TreatmentSessions({
+    TreatmentSession_FindingRef? backRef,
     $core.bool? loaded,
     $core.Iterable<TreatmentSession>? all,
   }) {
     final _result = create();
+    if (backRef != null) {
+      _result.backRef = backRef;
+    }
     if (loaded != null) {
       _result.loaded = loaded;
     }
@@ -756,16 +760,27 @@ class Finding_TreatmentSessions extends $pb.GeneratedMessage {
   static Finding_TreatmentSessions? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.bool get loaded => $_getBF(0);
+  TreatmentSession_FindingRef get backRef => $_getN(0);
   @$pb.TagNumber(1)
-  set loaded($core.bool v) { $_setBool(0, v); }
+  set backRef(TreatmentSession_FindingRef v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasLoaded() => $_has(0);
+  $core.bool hasBackRef() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLoaded() => clearField(1);
+  void clearBackRef() => clearField(1);
+  @$pb.TagNumber(1)
+  TreatmentSession_FindingRef ensureBackRef() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<TreatmentSession> get all => $_getList(1);
+  $core.bool get loaded => $_getBF(1);
+  @$pb.TagNumber(2)
+  set loaded($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLoaded() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLoaded() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<TreatmentSession> get all => $_getList(2);
 }
 
 class Finding extends $pb.GeneratedMessage {
@@ -1425,59 +1440,59 @@ class Exercise extends $pb.GeneratedMessage {
   void clearReps() => clearField(2);
 }
 
-class TreatmentSession_Findings extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TreatmentSession.Findings', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded')
-    ..pc<Finding>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'all', $pb.PbFieldType.PM, subBuilder: Finding.create)
+class TreatmentSession_FindingRef extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TreatmentSession.FindingRef', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'objectgraph'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..pc<Finding>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loaded', $pb.PbFieldType.PM, subBuilder: Finding.create)
     ..hasRequiredFields = false
   ;
 
-  TreatmentSession_Findings._() : super();
-  factory TreatmentSession_Findings({
-    $core.bool? loaded,
-    $core.Iterable<Finding>? all,
+  TreatmentSession_FindingRef._() : super();
+  factory TreatmentSession_FindingRef({
+    $core.String? id,
+    $core.Iterable<Finding>? loaded,
   }) {
     final _result = create();
-    if (loaded != null) {
-      _result.loaded = loaded;
+    if (id != null) {
+      _result.id = id;
     }
-    if (all != null) {
-      _result.all.addAll(all);
+    if (loaded != null) {
+      _result.loaded.addAll(loaded);
     }
     return _result;
   }
-  factory TreatmentSession_Findings.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TreatmentSession_Findings.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory TreatmentSession_FindingRef.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TreatmentSession_FindingRef.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  TreatmentSession_Findings clone() => TreatmentSession_Findings()..mergeFromMessage(this);
+  TreatmentSession_FindingRef clone() => TreatmentSession_FindingRef()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TreatmentSession_Findings copyWith(void Function(TreatmentSession_Findings) updates) => super.copyWith((message) => updates(message as TreatmentSession_Findings)) as TreatmentSession_Findings; // ignore: deprecated_member_use
+  TreatmentSession_FindingRef copyWith(void Function(TreatmentSession_FindingRef) updates) => super.copyWith((message) => updates(message as TreatmentSession_FindingRef)) as TreatmentSession_FindingRef; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static TreatmentSession_Findings create() => TreatmentSession_Findings._();
-  TreatmentSession_Findings createEmptyInstance() => create();
-  static $pb.PbList<TreatmentSession_Findings> createRepeated() => $pb.PbList<TreatmentSession_Findings>();
+  static TreatmentSession_FindingRef create() => TreatmentSession_FindingRef._();
+  TreatmentSession_FindingRef createEmptyInstance() => create();
+  static $pb.PbList<TreatmentSession_FindingRef> createRepeated() => $pb.PbList<TreatmentSession_FindingRef>();
   @$core.pragma('dart2js:noInline')
-  static TreatmentSession_Findings getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TreatmentSession_Findings>(create);
-  static TreatmentSession_Findings? _defaultInstance;
+  static TreatmentSession_FindingRef getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TreatmentSession_FindingRef>(create);
+  static TreatmentSession_FindingRef? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.bool get loaded => $_getBF(0);
+  $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set loaded($core.bool v) { $_setBool(0, v); }
+  set id($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasLoaded() => $_has(0);
+  $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLoaded() => clearField(1);
+  void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<Finding> get all => $_getList(1);
+  $core.List<Finding> get loaded => $_getList(1);
 }
 
 class TreatmentSession_PatientRef extends $pb.GeneratedMessage {
@@ -1548,7 +1563,7 @@ class TreatmentSession extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
-    ..aOM<TreatmentSession_Findings>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'findings', subBuilder: TreatmentSession_Findings.create)
+    ..aOM<TreatmentSession_FindingRef>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'finding', subBuilder: TreatmentSession_FindingRef.create)
     ..aOM<TreatmentSession_PatientRef>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'patient', subBuilder: TreatmentSession_PatientRef.create)
     ..hasRequiredFields = false
   ;
@@ -1558,7 +1573,7 @@ class TreatmentSession extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? name,
     $core.String? description,
-    TreatmentSession_Findings? findings,
+    TreatmentSession_FindingRef? finding,
     TreatmentSession_PatientRef? patient,
   }) {
     final _result = create();
@@ -1571,8 +1586,8 @@ class TreatmentSession extends $pb.GeneratedMessage {
     if (description != null) {
       _result.description = description;
     }
-    if (findings != null) {
-      _result.findings = findings;
+    if (finding != null) {
+      _result.finding = finding;
     }
     if (patient != null) {
       _result.patient = patient;
@@ -1628,15 +1643,15 @@ class TreatmentSession extends $pb.GeneratedMessage {
   void clearDescription() => clearField(3);
 
   @$pb.TagNumber(4)
-  TreatmentSession_Findings get findings => $_getN(3);
+  TreatmentSession_FindingRef get finding => $_getN(3);
   @$pb.TagNumber(4)
-  set findings(TreatmentSession_Findings v) { setField(4, v); }
+  set finding(TreatmentSession_FindingRef v) { setField(4, v); }
   @$pb.TagNumber(4)
-  $core.bool hasFindings() => $_has(3);
+  $core.bool hasFinding() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFindings() => clearField(4);
+  void clearFinding() => clearField(4);
   @$pb.TagNumber(4)
-  TreatmentSession_Findings ensureFindings() => $_ensure(3);
+  TreatmentSession_FindingRef ensureFinding() => $_ensure(3);
 
   @$pb.TagNumber(5)
   TreatmentSession_PatientRef get patient => $_getN(4);

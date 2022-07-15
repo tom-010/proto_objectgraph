@@ -4,58 +4,50 @@ package objectgraph;
 
 option go_package = "deniffel.com/examples/objectgraph/pb";
 
-// TODOs:
-// * Ref: say, which one is the case?
-// * Ref: one of?
-
 
 message Employee {
     string id = 1;
     string firstName = 2;
     string lastName = 3;
-    MyPatients myPatients = 4;
-    PatientsCreatedByMe createdByMe = 5;
+    MyPatientsLazy myPatients = 4;
+    PatientsCreatedByMeLazy createdByMe = 5;
 
-    message MyPatients {
-        Patient.AssignedEmployee backRef = 1;
+    message MyPatientsLazy {
+        Patient.AssignedEmployeeRef backRef = 1;
         bool loaded = 2;
         repeated Patient all = 3;
     }
 
-    message PatientsCreatedByMe {
-        Patient.CreatedByEmployee backRef = 1;
+    message PatientsCreatedByMeLazy {
+        Patient.CreatedByEmployeeRef backRef = 1;
+        bool loaded = 2;
         repeated Patient all = 3;
     }
-
-    message Ref {
-        string id = 1;
-        Employee loaded = 2;
-    }
-
 }
 
 message Patient {
     string id = 1;
     string salutation = 2;
     string lastName = 3;
-    AssignedEmployee employee = 4;
-    Findings findings = 5;
+    AssignedEmployeeRef employee = 4;
+    CreatedByEmployeeRef createdBy = 5;
+    FindingsLazy findings = 6;
 
-    message Findings {
-        bool loaded = 1;
-        repeated Finding all = 2;
+    message FindingsLazy {
+        Finding.PatientRef backRef = 1;
+        bool loaded = 2;
+        repeated Finding all = 3;
     }
 
-    message AssignedEmployee {
+    message AssignedEmployeeRef {
         string id = 1;
         Employee loaded = 2;
     }
 
-    message CreatedByEmployee {
+    message CreatedByEmployeeRef {
         string id = 1;
         Employee loaded = 2;
     }
-
 }
 
 
@@ -75,15 +67,15 @@ message Finding {
     }
 
     message TrainingSessions {
-        bool loaded = 1;
-        repeated TrainingSession all = 2;
-        // TODO: backref required! --> in others too
+        TrainingSession.FindingRef backRef = 1;
+        bool loaded = 2;
+        repeated TrainingSession all = 3;
     }
 
     message TreatmentSessions {
-        bool loaded = 1;
-        repeated TreatmentSession all = 2;
-        // TODO: backref required!
+        TreatmentSession.FindingRef backRef = 1;
+        bool loaded = 2;
+        repeated TreatmentSession all = 3;
     }
 }
 
@@ -134,13 +126,12 @@ message TreatmentSession {
     string id = 1;
     string name = 2;
     string description = 3;
-    Findings findings = 4;
+    FindingRef finding = 4;
     PatientRef patient = 5;
 
-    message Findings {
-        bool loaded = 1;
-        repeated Finding all = 2;
-        // TODO: backref!
+    message FindingRef {
+        string id = 1;
+        repeated Finding loaded = 2;
     }
 
     message PatientRef {
@@ -149,3 +140,7 @@ message TreatmentSession {
     }
 }
 
+
+// TODOs:
+// * Ref: say, which one is the case?
+// * Ref: one of?

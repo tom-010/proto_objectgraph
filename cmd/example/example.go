@@ -21,7 +21,7 @@ func main() {
 		Id:         "3458021",
 		Salutation: "Herr",
 		LastName:   "Mustermann",
-		Employee:   &pb.Employee_Ref{Id: "123", Loaded: &employee},
+		Employee:   &pb.Patient_AssignedEmployeeRef{Id: "123", Loaded: &employee},
 	}
 	db.Store(&patient)
 
